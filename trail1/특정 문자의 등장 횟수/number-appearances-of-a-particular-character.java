@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String word = sc.next();
+
+        int eeCnt = 0;
+        int ebCnt = 0;
+
+        for (int i = 0; i < word.length() - 1; i++) {
+            if (word.charAt(i) == 'e' && word.charAt(i + 1) == 'e') {
+                eeCnt++;
+            }
+
+            if (word.charAt(i) == 'e' && word.charAt(i + 1) == 'b') {
+                ebCnt++;
+            }
+        }
+
+        System.out.println(eeCnt + " " + ebCnt);
+    }
+}
